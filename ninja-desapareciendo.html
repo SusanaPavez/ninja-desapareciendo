@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <met-
+    a http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Desapareciendo</title>
+</head>
+<body>
+  <div id="container-fluid col-4">
+    <div class="row p-5">
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-success ninja1"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-warning ninja2"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-danger ninja3"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-info ninja4"></div>
+    </div>
+    <div class="row p-5">
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-info ninja5"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-danger ninja6"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-warning ninja7"></div>
+      <div class="col"><img src="ninja.png" alt="ninja" class="p-1 bg-success ninja8"></div>
+    </div>
+  </div>
+  <div id="container-fluid col-3">
+    <div></div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary align-content-center restaurar">Restaurar</button>
+  </div>
+
+  <img src="http://fc02.deviantart.net/fs71/f/2012/046/1/f/lol_face_by_matthewdgold-d4pux0y.png" class="lol align-items-center" alt="lol">
+
+
+  <script>
+      //MI CÓDIGO VA AQUÍ
+      $(".lol").hide();
+
+      $(".ninja1").click(function () {
+          $(".ninja8").fadeToggle()
+          });
+
+      $(".ninja2").click(function () {
+          $(".ninja7").fadeToggle()
+      });
+
+      $(".ninja3").click(function () {
+          $(".ninja6").fadeToggle()
+      });
+      $(".ninja4").click(function () {
+          $(".ninja5").fadeToggle()
+      });
+
+      $(".ninja5").click(function () {
+          $(".ninja1").fadeToggle()
+      });
+
+      $(".ninja6").click(function () {
+          $(".ninja2").fadeToggle()
+      });
+
+      $(".ninja7").click(function () {
+          $(".ninja3").fadeToggle()
+      });
+
+      
+      $(".ninja8").click(function () {
+          $(".ninja1").fadeToggle()
+      });
+
+      $(".restaurar").click(function () {
+            $(".ninja1, .ninja2, .ninja3, .ninja4, .ninja5, .ninja6, .ninja7, .ninja8, .restaurar").hide(function() {
+                $(".lol").show ();
+            })
+        });
+      $(".lol").click(function refreshPage() {
+        location.reload ();
+          
+          })
+  </script>  
+</body>
+</html>
